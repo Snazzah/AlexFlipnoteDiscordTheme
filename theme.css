@@ -1011,6 +1011,7 @@ div[class*="userPopout-"] .footer { background: var(--dark-secondary); border-to
 .account .btn:after { background-size: 20px 20px; }
 #rtc-connection .btn-disconnect:after { background-image: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_call_end_white_24px.svg"); }
 #rtc-connection .btn-info:after { background-image: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_info_white_24px.svg"); }
+.theme-dark #rtc-connection-popout hr { border-color: var(--dark-primary); }
 
 .account .btn-mute, .account .btn-deafen { opacity: 0.25; }
 .account .btn-settings { opacity: 1; }
@@ -1836,6 +1837,9 @@ div[class*="container-"] div[class*="scrollerWrap-"] div[class*="scroller"] {
 
 /* Server Settings */
 .ui-audit-log .title-time-wrap { background: transparent; }
+.dark-elevation-border-high, .theme-dark .elevation-border-high { background-color: var(--dark-highlight); }
+.theme-dark .scrollerThemed-19vinI.themeGhostHairline-2H8SiW .scroller-fzNley::-webkit-scrollbar-thumb { background-color: var(--dark-primary); }
+.theme-dark .scrollerThemed-19vinI.themeGhostHairline-2H8SiW .scroller-fzNley::-webkit-scrollbar-track { background-color: var(--dark-secondary); }
 .settings .settings-inner, .settings .settings-right { background: var(--dark-secondary) !important; }
 .roles-list-popout { background-color: var(--dark-primary) }
 .channel-notification-settings .content label { color: #fff; }
