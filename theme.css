@@ -871,7 +871,7 @@ div[class*="userPopout-"] .footer { background: var(--dark-secondary); border-to
 
 .create-guild-container .form-actions .btn-default:hover {
   transition: all 500ms ease;
-  box-shadow: inset 6.5em 0 0 0 #e74c3c;
+  box-shadow: inset 8.5em 0 0 0 #e74c3c;
 }
 
 @-webkit-keyframes server-create-enter {
@@ -1843,6 +1843,13 @@ div[class*="container-"] div[class*="scrollerWrap-"] div[class*="scroller"] {
 .settings .settings-inner, .settings .settings-right { background: var(--dark-secondary) !important; }
 .roles-list-popout { background-color: var(--dark-primary) }
 .channel-notification-settings .content label { color: #fff; }
+.theme-dark .ui-region-selector {
+    background-color: transparent;
+    border-color: rgba(0,0,0,.3);
+}
+.theme-dark .ui-region-selector .layout {
+    background-color: rgba(0,0,0,.1);
+}
 .notification-settings-modal .settings-section,
 .form .control-groups+.control-groups {
   background: var(--dark-highlight);
