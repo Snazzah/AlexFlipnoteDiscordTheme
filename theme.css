@@ -1264,13 +1264,13 @@ div[class*="userPopout-"] .footer { background: var(--dark-secondary); border-to
 /* Image Modal */
 /* BOTH */
 /* Contributed by Snazzah (https://github.com/SnazzyPine25 , Discord Snazzah#0371) */
-.modal .modal-inner .modal-image a {
+.modal-image a {
   background: var(--dark-highlight);
   padding-left: 10px;
   border-top: 2px solid rgba(0,0,0,0.2);
 }
 
-.modal .modal-inner .modal-image a:hover {
+.modal-image a:hover {
   background: var(--dark-highlight);
   color: #2196F3;
   opacity: 1;
