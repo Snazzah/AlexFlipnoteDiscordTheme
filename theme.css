@@ -2427,10 +2427,4 @@ div[class*="modal-"] div[class*="header-"] + div[class*="scrollerWrap-"] {
     transform: scale(1.2) translate(-5px, -5px);
 }
 
-.new-messages-indicator {
-    font-size: 0;
-    width: auto;
-    padding-right: 5px;
-}
-
 /* Rich Presence END */
