@@ -2463,3 +2463,9 @@ div[class*="modal-"] div[class*="header-"] + div[class*="scrollerWrap-"] {
 }
 
 /* Rich Presence END */
+
+/* https://github.com/Snazzah/BeautifulDiscordSnippets/tree/master/TitleBlocks */
+
+.markup .hljs::before {
+	border-radius: 5px 5px 0 0;
+}
