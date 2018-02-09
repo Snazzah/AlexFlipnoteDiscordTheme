@@ -766,6 +766,7 @@ div[class*="modal-"] div[class*="header-"] {
     border-radius: 0;
     padding-top: 5px; }
 
+<<<<<<< HEAD
 .theme-dark .invite-CTGItT.game-invite-embed, .theme-dark .preview-1mYYph, .theme-dark .preview-1mYYph .header-ygd_5b {
   background-color: var(--dark-primary) !important;
   border-color: var(--dark-secondary) !important; }
@@ -775,6 +776,25 @@ div[class*="modal-"] div[class*="header-"] {
   margin-bottom: 20px !important; }
 .theme-dark .preview-1mYYph + .subHeader-11w1JS {
   margin-bottom: 5px !important; }
+=======
+.theme-dark div[class*="invite-"].game-invite-embed,
+.theme-dark div[class*="preview-"],
+.theme-dark div[class*="preview-"] div[class*="header-"] {
+  background-color: var(--dark-primary) !important;
+  border-color: var(--dark-secondary) !important; }
+  .theme-dark div[class*="invite-"].game-invite-embed div[class*="actionButton-"],
+  .theme-dark div[class*="preview-"] div[class*="actionButton-"],
+  .theme-dark div[class*="preview-"] div[class*="header-"] div[class*="actionButton-"] {
+    background-color: var(--dark-secondary) !important; }
+  .theme-dark div[class*="invite-"].game-invite-embed div[class*="preview-"] + div + div[class*="channelTextAreaEnabled-"],
+  .theme-dark div[class*="preview-"] div[class*="preview-"] + div + div[class*="channelTextAreaEnabled-"],
+  .theme-dark div[class*="preview-"] div[class*="header-"] div[class*="preview-"] + div + div[class*="channelTextAreaEnabled-"] {
+    margin-bottom: 20px !important; }
+  .theme-dark div[class*="invite-"].game-invite-embed div[class*="preview-"] + div[class*="subHeader-"],
+  .theme-dark div[class*="preview-"] div[class*="preview-"] + div[class*="subHeader-"],
+  .theme-dark div[class*="preview-"] div[class*="header-"] div[class*="preview-"] + div[class*="subHeader-"] {
+    margin-bottom: 5px !important; }
+>>>>>>> 27178a96e10864af711881befcf7e84fedb2d41d
 
 .private-channel-recipients-invite,
 .messages-popout-wrap {
@@ -1701,6 +1721,7 @@ div[class*="channels-"] div[class*="container-"] + div[class*="container-"] {
     opacity: 1; } }
 @-webkit-keyframes attach-popout {
   from {
+<<<<<<< HEAD
     transform: scaleY(0);
     margin-bottom: -50px;
     opacity: 0; }
@@ -1735,6 +1756,42 @@ div[class*="channels-"] div[class*="container-"] + div[class*="container-"] {
     transform: scaleY(1);
     margin-bottom: -10px;
     opacity: 1; } }
+=======
+    margin-bottom: -50px;
+    opacity: 0;
+    transform: scaleY(0); }
+  to {
+    margin-bottom: -10px;
+    opacity: 1;
+    transform: scaleY(1); } }
+@-moz-keyframes attach-popout {
+  from {
+    margin-bottom: -50px;
+    opacity: 0;
+    transform: scaleY(0); }
+  to {
+    margin-bottom: -10px;
+    opacity: 1;
+    transform: scaleY(1); } }
+@-o-keyframes attach-popout {
+  from {
+    margin-bottom: -50px;
+    opacity: 0;
+    transform: scaleY(0); }
+  to {
+    margin-bottom: -10px;
+    opacity: 1;
+    transform: scaleY(1); } }
+@keyframes attach-popout {
+  from {
+    margin-bottom: -50px;
+    opacity: 0;
+    transform: scaleY(0); }
+  to {
+    margin-bottom: -10px;
+    opacity: 1;
+    transform: scaleY(1); } }
+>>>>>>> 27178a96e10864af711881befcf7e84fedb2d41d
 .app a, .connecting a {
   color: var(--accent); }
 
@@ -2343,11 +2400,7 @@ div[class*="regionSelectModal-"] {
     color: #fff;
     text-transform: none; }
     .create-guild-container.deprecated.create-or-join header::after, .create-guild-container .create-or-join header::after, .create-guild-container.deprecated.deprecated.create-or-join header::after, .create-guild-container.deprecated .create-or-join header::after {
-<<<<<<< Updated upstream
-      content: ' ­ƒÄÇ'; }
-=======
-      content: ' ≡ƒÄÇ'; }
->>>>>>> Stashed changes
+      content: ' 🎀'; }
   .create-guild-container.deprecated.create-or-join .actions .or, .create-guild-container .create-or-join .actions .or, .create-guild-container.deprecated.deprecated.create-or-join .actions .or, .create-guild-container.deprecated .create-or-join .actions .or {
     display: none; }
   .create-guild-container.deprecated.create-or-join .form-inner, .create-guild-container.deprecated.create-or-join .form, .create-guild-container .create-or-join .form-inner, .create-guild-container .create-or-join .form, .create-guild-container.deprecated.deprecated.create-or-join .form-inner, .create-guild-container.deprecated.deprecated.create-or-join .form, .create-guild-container.deprecated .create-or-join .form-inner, .create-guild-container.deprecated .create-or-join .form {
@@ -2690,6 +2743,60 @@ div[class*="uploadModalIn-"] div[class*="uploadDropModal-"] div[class*="bgScale-
     .attachPopout-gjwHsr .attachPopoutRow-elxASe .attachPopoutRowText-3YWM_W {
       margin-left: 13px; }
 >>>>>>> Stashed changes
+
+div[class*="attachButton-"].popout-open {
+  -moz-transform: scale(1) !important;
+  -o-transform: scale(1) !important;
+  -ms-transform: scale(1) !important;
+  -webkit-transform: scale(1) !important;
+  transform: scale(1) !important;
+  background-color: var(--dark-highlight) !important;
+  margin: -6px -13px -4px 0;
+  padding: 16px 13px 14px 10px; }
+
+div[class*="attachPopout-"] {
+  animation: attach-popout 200ms ease-in-out;
+  -webkit-animation: attach-popout 200ms ease-in-out;
+  -ms-animation: attach-popout 200ms ease-in-out;
+  -moz-animation: attach-popout 200ms ease-in-out;
+  -o-animation: attach-popout 200ms ease-in-out;
+  transition: background-color 200s ease-in-out;
+  -webkit-transition: background-color 200s ease-in-out;
+  -ms-transition: background-color 200s ease-in-out;
+  -moz-transition: background-color 200s ease-in-out;
+  -o-transition: background-color 200s ease-in-out;
+  background-color: var(--dark-highlight) !important;
+  border-radius: 0;
+  margin-bottom: -10px;
+  margin-left: 3px;
+  padding: 0; }
+  div[class*="attachPopout-"] > g {
+    -moz-transform: scale(1.1) translate(-1px, -1px);
+    -o-transform: scale(1.1) translate(-1px, -1px);
+    -ms-transform: scale(1.1) translate(-1px, -1px);
+    -webkit-transform: scale(1.1) translate(-1px, -1px);
+    transform: scale(1.1) translate(-1px, -1px); }
+  div[class*="attachPopout-"] div[class*="attachPopoutRow-"] {
+    border-radius: 0;
+    padding: 0 15px 0 0; }
+    div[class*="attachPopout-"] div[class*="attachPopoutRow-"]:hover {
+      background-color: var(--dark-primary) !important; }
+      div[class*="attachPopout-"] div[class*="attachPopoutRow-"]:hover div[class*="attachPopoutIcon-"] {
+        transition: background-color 200s ease-in-out !important;
+        -webkit-transition: background-color 200s ease-in-out !important;
+        -ms-transition: background-color 200s ease-in-out !important;
+        -moz-transition: background-color 200s ease-in-out !important;
+        -o-transition: background-color 200s ease-in-out !important;
+        background-color: rgba(0, 0, 0, 0.2); }
+    div[class*="attachPopout-"] div[class*="attachPopoutRow-"] div[class*="attachPopoutIcon-"] {
+      transition: background-color 200s ease-in-out;
+      -webkit-transition: background-color 200s ease-in-out;
+      -ms-transition: background-color 200s ease-in-out;
+      -moz-transition: background-color 200s ease-in-out;
+      -o-transition: background-color 200s ease-in-out;
+      padding: 8px 12px; }
+    div[class*="attachPopout-"] div[class*="attachPopoutRow-"] div[class*="attachPopoutRowText-"] {
+      margin-left: 13px; }
 
 .theme-dark .search .search-bar {
   background: transparent; }
