@@ -4,14 +4,14 @@
   .search .search-bar {
     background: transparent;
 
-    .searchFilter-1fJ0cd {
+    div[class*="searchFilter-"] {
       background-color: var(--dark-highlight);
       padding: 0 5px;
 
       [data-text] { font-weight: bold; }
     }
 
-    .searchAnswer-yD90ey {
+    div[class*="searchAnswer-"] {
       background-color: var(--dark-secondary);
       padding-left: 0;
 

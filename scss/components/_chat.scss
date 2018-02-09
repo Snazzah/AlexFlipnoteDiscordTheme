@@ -660,9 +660,9 @@ div[class*="channels-"] div[class*="container-"] div[class*="cursorPointer-"] {
 
 // Channel Notices
 
-.theme-dark .channelNotice-cQsVXw {
+.theme-dark div[class*="channelNotice-"] {
   background-color: var(--dark-highlight) !important;
-  .btn-3y-iNt {
+  div[class*="btn-"] {
     background-color: var(--dark-primary) !important;
   }
 }

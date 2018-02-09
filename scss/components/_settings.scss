@@ -417,21 +417,22 @@ div[class*="userSettingsAccount-"] {
   padding: 0 !important;
   margin-left: 10%;
 
-  .container-2oeFrl {
+  div[class*="container-"] {
     background-color: var(--dark-highlight) !important;
     border-radius: 5px 5px 0;
     box-shadow: none;
-    transition: all .2s ease;
-    height: 52px;
+    height: 100px;
+    margin-bottom: -48px;
+    @include transition(all 200s ease-in-out);
 
     // On screen shake
     [style="background-color: rgba(240, 71, 71, 0.9);"] {
       background-color: #700101 !important;
-      transition: all .2s ease;
-      height: 70px;
+      height: 120px;
+      @include transition(all 200s ease-in-out);
     }
 
-    > .flex-lFgbSz:before {
+    > div[class*="flex-"]:before {
       content: '';
       background: url('https://i-need.discord.cards/3399bf.png') center center no-repeat;
       background-size: contain;
