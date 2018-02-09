@@ -3198,7 +3198,7 @@ div[class*="userSettingsAccount-"] div[class*="cardPrimary-"] {
   margin-left: 10%; }
   .notice-region div[class*="container-"] {
     background-color: var(--dark-highlight) !important;
-    border-radius: 5px 5px 0;
+    border-radius: 5px 5px 0 0;
     box-shadow: none;
     height: 100px;
     margin-bottom: -48px;
