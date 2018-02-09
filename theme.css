@@ -660,9 +660,9 @@ div[class*="channels-"] div[class*="container-"] div[class*="cursorPointer-"] {
   border-radius: 0;
   color: #fff; }
 
-.theme-dark .channelNotice-cQsVXw {
+.theme-dark div[class*="channelNotice-"] {
   background-color: var(--dark-highlight) !important; }
-  .theme-dark .channelNotice-cQsVXw .btn-3y-iNt {
+  .theme-dark div[class*="channelNotice-"] div[class*="btn-"] {
     background-color: var(--dark-primary) !important; }
 
 .theme-dark .user-settings-account::after,
@@ -2356,7 +2356,7 @@ div[class*="regionSelectModal-"] {
     color: #fff;
     text-transform: none; }
     .create-guild-container.deprecated.create-or-join header::after, .create-guild-container .create-or-join header::after, .create-guild-container.deprecated.deprecated.create-or-join header::after, .create-guild-container.deprecated .create-or-join header::after {
-      content: ' 🎀'; }
+      content: ' ≡ƒÄÇ'; }
   .create-guild-container.deprecated.create-or-join .actions .or, .create-guild-container .create-or-join .actions .or, .create-guild-container.deprecated.deprecated.create-or-join .actions .or, .create-guild-container.deprecated .create-or-join .actions .or {
     display: none; }
   .create-guild-container.deprecated.create-or-join .form-inner, .create-guild-container.deprecated.create-or-join .form, .create-guild-container .create-or-join .form-inner, .create-guild-container .create-or-join .form, .create-guild-container.deprecated.deprecated.create-or-join .form-inner, .create-guild-container.deprecated.deprecated.create-or-join .form, .create-guild-container.deprecated .create-or-join .form-inner, .create-guild-container.deprecated .create-or-join .form {
@@ -2700,15 +2700,15 @@ div[class*="attachPopout-"] {
 
 .theme-dark .search .search-bar {
   background: transparent; }
-  .theme-dark .search .search-bar .searchFilter-1fJ0cd {
+  .theme-dark .search .search-bar div[class*="searchFilter-"] {
     background-color: var(--dark-highlight);
     padding: 0 5px; }
-    .theme-dark .search .search-bar .searchFilter-1fJ0cd [data-text] {
+    .theme-dark .search .search-bar div[class*="searchFilter-"] [data-text] {
       font-weight: bold; }
-  .theme-dark .search .search-bar .searchAnswer-yD90ey {
+  .theme-dark .search .search-bar div[class*="searchAnswer-"] {
     background-color: var(--dark-secondary);
     padding-left: 0; }
-    .theme-dark .search .search-bar .searchAnswer-yD90ey [data-text] {
+    .theme-dark .search .search-bar div[class*="searchAnswer-"] [data-text] {
       font-weight: lighter; }
 .theme-dark .search-popout {
   background-color: var(--dark-highlight); }
@@ -3184,17 +3184,26 @@ div[class*="userSettingsAccount-"] div[class*="cardPrimary-"] {
 .notice-region {
   padding: 0 !important;
   margin-left: 10%; }
-  .notice-region .container-2oeFrl {
+  .notice-region div[class*="container-"] {
     background-color: var(--dark-highlight) !important;
     border-radius: 5px 5px 0;
     box-shadow: none;
-    transition: all .2s ease;
-    height: 52px; }
-    .notice-region .container-2oeFrl [style="background-color: rgba(240, 71, 71, 0.9);"] {
+    height: 100px;
+    margin-bottom: -48px;
+    transition: all 200s ease-in-out;
+    -webkit-transition: all 200s ease-in-out;
+    -ms-transition: all 200s ease-in-out;
+    -moz-transition: all 200s ease-in-out;
+    -o-transition: all 200s ease-in-out; }
+    .notice-region div[class*="container-"] [style="background-color: rgba(240, 71, 71, 0.9);"] {
       background-color: #700101 !important;
-      transition: all .2s ease;
-      height: 70px; }
-    .notice-region .container-2oeFrl > .flex-lFgbSz:before {
+      height: 120px;
+      transition: all 200s ease-in-out;
+      -webkit-transition: all 200s ease-in-out;
+      -ms-transition: all 200s ease-in-out;
+      -moz-transition: all 200s ease-in-out;
+      -o-transition: all 200s ease-in-out; }
+    .notice-region div[class*="container-"] > div[class*="flex-"]:before {
       content: '';
       background: url("https://i-need.discord.cards/3399bf.png") center center no-repeat;
       background-size: contain;
