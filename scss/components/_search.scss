@@ -4,31 +4,36 @@
   .search .search-bar {
     background: transparent;
 
-    .search-filter {
+    span[class*="searchFilter-"] {
       background-color: var(--dark-highlight);
       padding: 0 5px;
 
       [data-text] { font-weight: bold; }
     }
 
-    .search-answer {
-      background-color: var(--dark-secondary);
+    span[class*="searchAnswer-"] {
+      background-color: var(--dark-primary);
       padding-left: 0;
 
       [data-text] { font-weight: lighter; }
     }
   }
 
-  .search-popout {
+  div[class*="searchPopout-"] {
     background-color: var(--dark-highlight);
 
-    .option {
-      &.search-query {
+    div[class*="option-"] {
+      & div[class*="searchQuery-"] {
         background-color: #111;
         border: 0;
 
-        &.selected { background-color: var(--dark-primary); }
-        &+.results-group::before { display: none; }
+        &+div[class*="selected-"] { background-color: var(--dark-primary) !important; }
+        &+div[class*="resultsGroup-"]::before { display: none; }
+
+        &+div[class*="searchQuery-"] {
+          background-color: var(--dark-primary);
+          &+div[class*="selected-"] { background-color: var(--dark-highlight) !important; }
+        }
 
         .keybind-shortcut.dim span {
           background-color: var(--dark-secondary);
@@ -42,11 +47,11 @@
 
       &::after { background: var(--dark-highlight); }
 
-      &.selected {
-        background-color: var(--dark-secondary);
+      &+div[class*="selected-"], &+div[class*="searchOption-"] div[class*="selected-"] {
+        background-color: var(--dark-secondary) !important;
 
         strong, .displayed-nick { color: #fff; }
-        .filter { color: #fff; }
+        span[class*="filter-"] { color: #fff; }
 
         &::after { background: linear-gradient(90deg, hsla(0, 0%, 95%, 0) 0, var(--dark-secondary) 50%); }
       }
@@ -85,46 +90,81 @@
   }
 
   .react-datepicker {
-    background-color: var(--dark-highlight);
-    color: #fff;
+    background-color: var(--dark-primary) !important;
 
-    .react-datepicker__day.react-datepicker__day--selected:hover,.react-datepicker .react-datepicker__day:hover {
-      background-color: var(--dark-highlight);
-      color: #fff;
+    .react-datepicker__day {
+      background-color: var(--dark-secondary) !important;
+      border-color: #000 !important;
+      color: #fff !important;
+
+      &.react-datepicker__day--selected:hover,
+      &:hover {
+        background-color: #242424 !important;
+        color: #fff !important;
+      }
+
+      &.react-datepicker__day--selected {
+        background-color: var(--dark-secondary) !important;
+      }
+
+      &.react-datepicker__day--outside-month {
+        background-color: var(--dark-highlight) !important;
+        color: var(--dark-secondary) !important;
+      }
+
+      &.react-datepicker__day--disabled:not(.react-datepicker__day--outside-month) {
+        background-color: var(--dark-primary) !important;
+        color: #555 !important;
+      }
+
+      .react-datepicker__day-name { color: #fff; }
     }
 
-    .react-datepicker__day.react-datepicker__day--selected, .react-datepicker .react-datepicker__day {
-      background-color: var(--dark-secondary);
+    .react-datepicker__current-month,
+    .react-datepicker__day-name {
+      border-color: #fff !important;
+      color: #fff !important;
     }
-
-    .react-datepicker__day.react-datepicker__day--disabled,.react-datepicker .react-datepicker__day.react-datepicker__day--disabled:hover {
-      background-color: rgba(0, 0, 0, .05);
-      color: #808080;
-    }
-
-    .react-datepicker__day--disabled,.react-datepicker .react-datepicker__day--outside-month {
-      background-color: var(--dark-secondary);
-      color: #fff;
-    }
-
-    .react-datepicker__day, .react-datepicker__day.react-datepicker__day--selected { color: #fff; }
-    .react-datepicker__day-name { color: #fff; }
-    .react-datepicker .react-datepicker__current-month { color: #fff; }
 
     .react-datepicker__header {
-      background-color: var(--dark-highlight);
-      color: #fff;
+      background-color: var(--dark-primary) !important;
+    }
+
+    .react-datepicker__navigation {
+      border-color: transparent !important;
+      filter: brightness(2);
+    }
+  }
+
+  .date-picker {
+    background-color: var(--dark-primary);
+    border-top: 0;
+
+    .hint-value {
+      background-color: var(--dark-highlight) !important;
+      font-weight: lighter !important;
     }
   }
 }
 
 
 // Private Message Search
-.private-channels .search-bar {
-  background-color: var(--dark-highlight);
-  border-radius: 0;
-  padding-bottom: 4px;
-  padding-top: 4px;
+.private-channels {
+  div[class*="scroller-"] { padding-top: 0 !important; }
+
+  .search-bar {
+    border-radius: 0;
+    box-shadow: none;
+    padding-bottom: 4px;
+    padding-top: 4px;
+
+    .search-bar-inner {
+      background: transparent;
+      border: 0;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2),
+                  0 0 0 1px rgba(32, 34, 37, .6);
+    }
+  }
 }
 
 .search-bar .search-bar-inner { background: rgba(47, 47, 47, .9); }

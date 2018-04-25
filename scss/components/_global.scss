@@ -1,12 +1,15 @@
-.theme-dark .user-settings-account::after,
-.theme-light .user-settings-account::after {
-  color: var(--accent);
-  content: 'Theme version: 1.0.6.01';
-  font-weight: bold;
+.theme-dark, .theme-light {
+  div[class*="userSettingsAccount-"]::after {
+    color: var(--accent);
+    content: 'Theme version: 1.0.6.47';
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 2.1em;
+  }
 }
 
 // Global
-
 :root {
   // --<var>: <value>
   --accent: #7a78bd;
@@ -75,6 +78,7 @@
 
 div[class*="nameDefault-"],
 div[class*="nameHovered-"],
+div[class*="nameMuted-"],
 div[class*="nameCollapsed"],
 div[class*="nameHoveredCollapsed"] {
   font-size: 15px;

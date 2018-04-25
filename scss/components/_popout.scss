@@ -74,7 +74,16 @@ div[class*="userPopout-"] {
   }
 
   div[class*="bodyAlignCenter-"], div[class*="bodyNormal-"] { background: transparent; border-bottom: 0; }
-  div[class*="footer-"] { background: var(--dark-secondary); }
+
+  div[class*="footer-"] {
+    background: var(--dark-secondary);
+
+    input[class*="quickMessage-"] {
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
   div[class*="content-"] { background-color: transparent; }
 
   div[class*="avatarWrapperNormal-"] {
@@ -306,23 +315,31 @@ div[class*="root-"] {
 
 
 // Emoji picker
-.emoji-picker {
-  .sticky-header {
+div[class*="emojiPicker-"] {
+  background: transparent;
+  border: 0;
+
+  div[class*="header-"] {
+    background-color: var(--dark-highlight);
+    .search-bar-light { background: transparent; }
+  }
+
+  div[class*="stickyHeader-"] {
+    background-color: var(--dark-primary);
     left: 0;
     width: 100%;
   }
 
-  .header { background-color: var(--dark-highlight); }
   div[class*="scrollerWrap-"] { background: var(--dark-secondary); }
 
-  .category {
+  div[class*="category-"] {
     color: var(--accent);
     font-size: 13px;
     font-weight: bold;
     padding-left: 1em;
   }
 
-  .categories {
+  div[class*="categories-"] {
     background: var(--dark-primary);
     border-top: 0;
     margin: 0;
@@ -330,10 +347,10 @@ div[class*="root-"] {
     .item.selected { border-bottom-color: var(--accent); }
   }
 
-  .dimmer { border-radius: 0; &.visible { background: rgba(0, 0, 0, .5); }}
+  div[class*="dimmer-"] { border-radius: 0; &.visible { background: rgba(0, 0, 0, .5); }}
 }
 
-.theme-dark .popout {
+.theme-dark div[class*="popout-"] {
   box-shadow: none;
 
   div[class*="popoutList-"] { background: var(--dark-highlight); }
@@ -444,16 +461,22 @@ div[class*="wrapper-"] {
 
 .popout-menu { border-radius: 0;}
 
-.status-picker .popout-menu-item {
-  @include transition(all 250ms ease);
-  background-color: var(--dark-primary);
-  color: #fff;
-
-  &:hover {
+div[class*="popoutTopLeft-"], div[class*="popoutBottom-"] {
+  div[class*="menu-"] {
     @include transition(all 250ms ease);
-    background-color: var(--dark-secondary);
+    background-color: var(--dark-primary);
     color: #fff;
-    padding-left: 20px;
+
+    div[class*="item-"] {
+      @include transition(all 250ms ease);
+      div[class*="label-"] { color: #fff; }
+
+      &:hover {
+        background-color: var(--dark-secondary);
+        color: #fff;
+        padding-left: 20px;
+      }
+    }
   }
 }
 
@@ -564,14 +587,17 @@ div[class*="regionSelectModal-"] {
 .create-guild-container, .create-guild-container.deprecated {
   @include animation(server-create-enter 500ms ease-in-out);
   background-color: var(--dark-highlight);
+
+  input[type=text] { color: #fff !important; }
   .form.deprecated .form-inner { background-color: transparent; }
+  .join-server .link-container input { color: #fff; }
 
   &.deprecated.create-or-join, .create-or-join {
     header {
       color: #fff;
       text-transform: none;
 
-      &::after { content: ' 🎀'; }
+      &::after { content: ' <3'; }
     }
 
     .actions .or { display: none; }
@@ -641,20 +667,9 @@ div[class*="regionSelectModal-"] {
 
 
 // Reactions
-.message-reactions-modal {
-  background: transparent;
-
-  .message-reactions-reactors {
-    background-color: var(--dark-primary);
-    .reactor { box-shadow: 0; }
-  }
-
-  .message-reactions-reactors .reactor .name,
-  .message-reactions-list-inner .reaction .count {
-    color: #fff;
-  }
-
-  .message-reactions-list .scroller, .message-reactions-list-inner {
+.theme-dark div[class*="container-"] {
+  div[class*="reactors"] { background-color: var(--dark-primary); }
+  div[class*="sidebar-"] {
     background-color: var(--dark-highlight);
     border-radius: 0;
   }
@@ -688,8 +703,23 @@ div[class*="regionSelectModal-"] {
   }
 }
 
+.theme-dark div[class*="popoutList-"] {
+  background: var(--dark-highlight);
+  div[class*="searchBar-"] { background: var(--dark-primary); }
+}
+
 div[class*="modal-"] div[class*="quickswitcher-"] div[class*="header-"] { background: var(--dark-primary); }
+div[class*="backdrop-"] + div[class*="modal-"] {
+  div[class*="modal-"] { background: var(--dark-highlight); }
+  div[class*="countryButton-"] { background: var(--dark-secondary); }
+  div[class*="phoneField-"], input[class*="inputField-"] {
+    background: var(--dark-primary);
+    box-shadow: none;
+  }
+}
+
 .theme-dark div[class*="quickswitcher-"] {
+  @include animation(quickswitcher-menu 300ms ease-in-out);
   background: var(--dark-primary);
   div[class*="resultFocused-"] { background: var(--dark-highlight); }
   input[class*="input-"] {
@@ -771,38 +801,44 @@ div[class*="modal-"] div[class*="quickswitcher-"] div[class*="header-"] { backgr
 }
 
 
-// Pin message
-.themed-popout .header { background: var(--dark-highlight) !important; }
+// Top Popups (Pins, Mentions, etc)
+.theme-dark span[class*="iconBadge-"] { background-color: var(--accent); }
 
-.theme-dark .messages-popout-wrap {
+.theme-dark div[class*="messagesPopoutWrap-"] {
+  @include animation(popout-content 400ms ease-in-out);
   background: var(--dark-primary) !important;
   border: 0 !important;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .3) !important;
   max-height: 541px !important;
 
-  .comment {
-    background: rgba(0, 0, 0, 0);
-    border-radius: 0 3px 3px !important;
-    padding: 4px 7px 10px 10px !important;
+  div[class*="header"] { background: var(--dark-highlight) !important; }
 
-    &::before {
-      border-color: transparent rgba(0, 0, 0, .3) transparent transparent;
-      left: -20px;
-      top: -4px;
+  div[class*="messagesPopout-"] {
+    .message-group, .message-group:hover {
+      background: transparent !important;
+      border: 0 !important;
+
+      div[class*="actionButtons-"] {
+        background-color: transparent;
+        box-shadow: none;
+        transition: background-color .1s ease-in-out;
+        &:hover { box-shadow: none; }
+        div[class*="jumpButton-"] { background-color: var(--dark-secondary); }
+      }
     }
-  }
 
-  .messages-popout .message-group, .messages-popout .message-group:hover {
-    background: transparent !important;
-    border: 0 !important;
+    .comment {
+      background: rgba(0, 0, 0, 0);
+      border-radius: 0 3px 3px !important;
+      padding: 4px 7px 10px 10px !important;
 
-    .action-buttons {
-      background-color: transparent;
-      box-shadow: none;
-      transition: background-color .1s ease-in-out;
-      &:hover { box-shadow: none; }
-      .jump-button { background-color: var(--dark-secondary); }
+      &::before {
+        border-color: transparent rgba(0, 0, 0, .3) transparent transparent;
+        left: -20px;
+        top: -4px;
+      }
     }
+
   }
 }
 
@@ -835,7 +871,7 @@ div[class*="modal-"] div[class*="quickswitcher-"] div[class*="header-"] { backgr
   }
 }
 
-video[autoplay] { display: none; }
+div[class*="content-"] video[autoplay] { display: none; }
 
 
 // Upload area
@@ -919,7 +955,6 @@ div[class*="uploadModalIn-"] div[class*="uploadDropModal-"] {
 }
 
 // Attachment Popout
-
 svg[class*="attachButton-"].popout-open {
   @include transform(scale(1) !important);
   background-color: var(--dark-highlight) !important;
