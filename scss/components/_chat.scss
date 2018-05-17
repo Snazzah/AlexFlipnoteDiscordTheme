@@ -86,7 +86,8 @@
   background-color: var(--dark-secondary);
 }
 
-.theme-dark #friends .friends-table .friends-row .friends-column-actions .friends-action {
+.theme-dark #friends .friends-table .friends-row .friends-column-actions .friends-action,
+.theme-dark [class*="noChannel-"] {
   background-color: var(--dark-highlight);
 }
 
