@@ -63,7 +63,8 @@
   }
 }
 
-.confirm-message-modal .form-inner .message-group.hide-overflow .comment .message-first .body .message-text .markup code.inline {
+.confirm-message-modal .form-inner .message-group.hide-overflow .comment .message-first .body .message-text .markup code.inline,
+.theme-dark [class*="noChannel-"] {
   background: var(--dark-highlight) !important;
 }
 
