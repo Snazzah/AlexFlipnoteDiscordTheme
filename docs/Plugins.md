@@ -173,7 +173,7 @@ Just simply more animations everywhere
 ### [Beta] Perspective Animations
 Some good animations using perspective animation
 ```css
-@import "https://discordtheme.alexflipnote.dev/plugins/pers-anims.css";
+@import "https://discordtheme.alexflipnote.dev/plugins/perspectiveAnims.css";
 /* For more animations (that might seem a bit too much) */
-@import "https://discordtheme.alexflipnote.dev/plugins/pers-anims-plus.css";
+@import "https://discordtheme.alexflipnote.dev/plugins/perspectiveAnimsPlus.css";
 ```
