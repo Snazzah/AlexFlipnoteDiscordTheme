@@ -1,102 +1,99 @@
-[class*="message-"]{
-    [class*="avatar-"] {
+div[class*="message-"]{
+    div[class*="avatar-"] {
         animation: fade-in-right .2s;
     }
 
-    [class*="headerCozyMeta-"] {
+    div[class*="headerCozyMeta-"] {
         animation: fade-in-left .2s;
     }
 }
 
-[class*="container-3-"] {
+div[class*="container-3-"] {
     animation: fade-in-left .2s;
 }
 
-[class*="activityProfile-"] {
+div[class*="activityProfile-"] {
     [class*="headerText-"] {
         animation: fade-in-small-left .5s;
     }
 
-    [class*="body-"] {
+    div[class*="body-"] {
         animation: fade-in-small-right .5s;
     }
 }
 
-[class*="userPopout-"] {
-    [class*="body-"] [class*="bodyTitle-"],
-    [class*="rolesList-"] [class*="addButton-"] {
+div[class*="userPopout-"] {
+    div[class*="body-"] div[class*="bodyTitle-"],
+    ul[class*="rolesList-"] button[class*="addButton-"] {
         animation: fade-in-small-left .5s;
     }
 
-    [class*="protip-"],
-    [class*="timeBarUserPopout-"] {
+    div[class*="protip-"],
+    div[class*="timeBarUserPopout-"] {
         animation: fade-in-small-top .5s;
     }
     
-    [class*="role-"], [class*="note-"] {
+    li[class*="role-"], div[class*="note-"] {
         animation: fade-in-small-right .5s;
     }
 
-    [class*="activityUserPopout-"] {
-        [class*="headerText-"] {
+    div[class*="activityUserPopout-"] {
+        div[class*="headerText-"] {
             animation: fade-in-small-left .5s;
         }
     
-        [class*="body-"] {
+        div[class*="body-"] {
             animation: fade-in-small-right .5s;
         }
     }
 }
 
-[class*="userInfoSection-"] {
-    [class*="userInfoSectionHeader-"] {
+div[class*="userInfoSection-"] {
+    div[class*="userInfoSectionHeader-"] {
         animation: fade-in-small-left .5s;
     }
 
-    [class*="note-"] {
+    div[class*="note-"] {
         animation: fade-in-small-right .5s;
     }
 }
 
-[class*="listScroller-"] {
-    animation: fade-in-small-left .45s;
-}
-
-[class*="membersWrap-"] {
+div[class*="listScroller-"],
+div[class*="membersWrap-"] {
     animation: fade-in-small-left .4s;
 }
 
-[class*="codeRedemption-"] {
+div[class*="codeRedemption-"] {
     animation: fade-in-small-bottom .4s;
 
-    & + [class*="root-"] {
+    & + div[class*="root-"] {
         animation: fade-in-small-top .4s;
     }
 }
 
-[class*="heroCarousel-"] {
+div[class*="heroCarousel-"] {
     animation: fade-in-small-bottom .4s;
 
-    & + [class*="homeBody-"] {
+    & + div[class*="homeBody-"] {
         animation: fade-in-small-top .4s;
     }
 }
 
-[class*="friendsTable-"] {
-    [class*="friendsTableAdd-"] {
+div[class*="friendsTable-"] {
+    div[class*="friendsTableAdd-"] {
         animation: fade-in-small-bottom .4s;
     }
 
-    [class*="friendTableSuggestionsHeader-"],
-    [class*="friendsTableBody-"] {
+    div[class*="friendTableSuggestionsHeader-"],
+    div[class*="friendsTableBody-"] {
         animation: fade-in-small-top .4s;
     }
 }
 
-[class*="stickyHeader-"] {
+div[class*="stickyHeader-"] {
     animation: fade-in-small-bottom .4s;
 }
 
-[class*="scrollerStore-"] [class*="rowWrapper-"] {
+div[class*="scrollerStore-"] div[class*="rowWrapper-"] {
     animation: fade-in-small-top .4s;
 }

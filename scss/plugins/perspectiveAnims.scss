@@ -1,77 +1,77 @@
 @import 'perspectiveAnims/animations';
 
-[class*="popoutLeft-"],
-[class*="popoutContainer-"]:hover [class*="popout-"] {
+div[class*="popoutLeft-"],
+div[class*="popoutContainer-"]:hover div[class*="popout-"] {
     animation: popout-right .3s;
 }
 
-[class*="popoutRight-"] {
+div[class*="popoutRight-"] {
     animation: popout-left .3s;
 }
 
-[class*="popoutBottom"] {
+div[class*="popoutBottom"] {
     animation: popout-bottom .3s;
 }
 
-[class*="popoutTop"] {
+div[class*="popoutTop"] {
     animation: popout-top .3s;
 }
 
-[class*="autocomplete-"] {
+div[class*="autocomplete-"] {
     animation: flip-up .2s;
 }
 
-[class*="messageGroupBlocked-"] [class*="container-"] {
+div[class*="messageGroupBlocked-"] div[class*="container-"] {
     animation: reveal .6s;
 }
 
-.wrapper-2F3Zv8.popout-2fzvxG {
+div.wrapper-2F3Zv8.popout-2fzvxG {
     animation: fade-in-small-bottom .5s;
 }
 
-[class*="activityUserPopout-"] {
+div[class*="activityUserPopout-"] {
     overflow: hidden !important;
 }
-  
-[class*="headerTop-"] {
+
+div[class*="profile-"] {
+    animation: fade-in-right .5s;
+}
+
+div[class*="userPopout-"] {
+    div[class*="header-"] {
+        div[class*="nameTag-"], button[class="lookOulined-"] {
+            animation: fade-in-tiny-top .5s;
+        }
+    }
+}
+
+div[class*="headerTop-"] {
     overflow: hidden !important;
 
     [class*="headerText-"] {
         animation: fade-in-small-top .5s;
     }
 }
-
-[class*="profile-"] {
-    animation: fade-in-right .5s;
-}
-
-[class*="userPopout-"] {
-    [class*="header-"] {
-        [class*="nameTag-"], [type="user_activity_play"] {
-            animation: fade-in-tiny-top .5s;
-        }
-    }
-}
   
     
-[class*="modal-"] {
+div[class*="modal-"] {
     animation: flip-up .5s;
 
-    [class*="header-"] {
-        [class*="actionButton-"] {
+    div[class*="header-"] {
+        button[class*="actionButton-"] {
             animation: fade-in-small-right .5s;
         }
 
-        [class*="additionalActionsIcon-"] {
+        div[class*="additionalActionsIcon-"] {
             animation: fade-in-small-left .5s;
         }
 
-        [class*="nameTag-"] {
+        div[class*="nameTag-"] {
             animation: fade-in-left .5s;
         }
     }
     
-    [class*="connectedAccount-"] {
+    div[class*="connectedAccount-"] {
         animation: fade-in-tiny-top .3s;
 
         &:nth-child(odd) {
@@ -88,7 +88,7 @@
     }
 }
   
-[class*='privateChannels-'][class*='channel-'] {
+div[class*='privateChannels-'] div[class*='channel-'] {
     &:nth-child(n+2):nth-child(-n+5) {
         animation: fade-in-small-bottom .3s;
     }
@@ -106,7 +106,7 @@
     }
 }
   
-[class*="profileBadgeWrapper-"] {
+div[class*="profileBadgeWrapper-"] {
     animation: fade-in-tiny-top .3s;
 
     &:nth-of-type(2) {
@@ -122,8 +122,8 @@
     }
 }
   
-[class*="tabBar-"] {
-    [class*="topPill-"], [class*="item-"] {
+div[class*="tabBar-"], div[class*="topPill-"] {
+    div[class*="item-"] {
         animation: fade-in-small-left .4s;
 
         &:nth-of-type(2) {
@@ -151,30 +151,24 @@
         }
     }
 }
-  
-  [class*="listScroller-"] [class*="listRow-"]:hover [class*="icon-"],
-  [class*="listScroller-"] [class*="listRow-"]:hover [class*="listAvatar-"] {
-      margin-left: 10px;
-      transition: margin-left .2s;
-  }
-  
-[class*="listScroller-"] [class*="listRow-"] {
-    [class*="icon-"], [class*="listAvatar-"] {
+
+div[class*="listScroller-"] div[class*="listRow-"] {
+    div[class*="icon-"], div[class*="listAvatar-"] {
         margin-left: 0;
         transition: margin-left .2s;
     }
 
-    &:hover [class*="icon-"],
-    &:hover [class*="listAvatar-"] {
+    &:hover div[class*="icon-"],
+    &:hover div[class*="listAvatar-"] {
         margin-left: 10px;
         transition: margin-left .2s;
     }
 }
 
-[class*="contextMenu-"] {
+div[class*="contextMenu-"] {
     overflow: hidden !important;
 
-    [class*="item-"] {
+    div[class*="item-"] {
         padding-left: 9px;
         transition: padding-left .2s;
         animation: fade-in-small-left .25s;
@@ -186,12 +180,12 @@
     }
 }
 
-[class*="headerBar-"] {
-    [class*="topic-"], [class*="toolbar-"] {
+div[class*="headerBar-"] {
+    div[class*="topic-"], div[class*="toolbar-"] {
         animation: fade-in-small-left .4s;
     }
 
-    [class*="title-"] {
+    div[class*="title-"] {
         animation: fade-in-small-bottom .4s;
     }
 }
