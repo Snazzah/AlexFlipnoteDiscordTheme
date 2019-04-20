@@ -1,0 +1,205 @@
+@import 'perspectiveAnims/animations';
+
+[class*="popoutLeft-"],
+[class*="popoutContainer-"]:hover [class*="popout-"] {
+    animation: popout-right .3s;
+}
+
+[class*="popoutRight-"] {
+    animation: popout-left .3s;
+}
+
+[class*="popoutBottom"] {
+    animation: popout-bottom .3s;
+}
+
+[class*="popoutTop"] {
+    animation: popout-top .3s;
+}
+
+[class*="autocomplete-"] {
+    animation: flip-up .2s;
+}
+
+[class*="messageGroupBlocked-"] [class*="container-"] {
+    animation: reveal .6s;
+}
+
+.wrapper-2F3Zv8.popout-2fzvxG {
+    animation: fade-in-small-bottom .5s;
+}
+
+[class*="activityUserPopout-"] {
+    overflow: hidden !important;
+}
+  
+[class*="headerTop-"] {
+    overflow: hidden !important;
+
+    [class*="headerText-"] {
+        animation: fade-in-small-top .5s;
+    }
+}
+
+[class*="profile-"] {
+    animation: fade-in-right .5s;
+}
+
+[class*="userPopout-"] {
+    [class*="header-"] {
+        [class*="nameTag-"], [type="user_activity_play"] {
+            animation: fade-in-tiny-top .5s;
+        }
+    }
+}
+  
+    
+[class*="modal-"] {
+    animation: flip-up .5s;
+
+    [class*="header-"] {
+        [class*="actionButton-"] {
+            animation: fade-in-small-right .5s;
+        }
+
+        [class*="additionalActionsIcon-"] {
+            animation: fade-in-small-left .5s;
+        }
+
+        [class*="nameTag-"] {
+            animation: fade-in-left .5s;
+        }
+    }
+    
+    [class*="connectedAccount-"] {
+        animation: fade-in-tiny-top .3s;
+
+        &:nth-child(odd) {
+            animation: fade-in-tiny-top .45s;
+        }
+
+        &:nth-child(n+3):nth-child(even) {
+            animation: fade-in-tiny-top .25s;
+        }
+        
+        &:nth-child(-n+5):nth-child(odd) {
+            animation: fade-in-tiny-top .32s;
+        }
+    }
+}
+  
+[class*='privateChannels-'][class*='channel-'] {
+    &:nth-child(n+2):nth-child(-n+5) {
+        animation: fade-in-small-bottom .3s;
+    }
+
+    &:nth-child(3) {
+        animation-duration: .35s !important;
+    }
+
+    &:nth-child(4) {
+        animation-duration: .4s !important;
+    }
+
+    &:nth-child(5) {
+        animation-duration: .45s !important;
+    }
+}
+  
+[class*="profileBadgeWrapper-"] {
+    animation: fade-in-tiny-top .3s;
+
+    &:nth-of-type(2) {
+        animation: fade-in-tiny-top .35s;
+    }
+
+    &:nth-of-type(3) {
+        animation: fade-in-tiny-top .4s;
+    }
+
+    &:nth-of-type(4) {
+        animation: fade-in-tiny-top .45s;
+    }
+}
+  
+[class*="tabBar-"] {
+    [class*="topPill-"], [class*="item-"] {
+        animation: fade-in-small-left .4s;
+
+        &:nth-of-type(2) {
+            animation: fade-in-small-left .45s;
+        }
+
+        &:nth-of-type(3) {
+            animation: fade-in-small-left .5s;
+        }
+
+        &:nth-of-type(4) {
+            animation: fade-in-small-left .55s;
+        }
+
+        &:nth-of-type(5) {
+            animation: fade-in-small-left .6s;
+        }
+
+        &:nth-of-type(6) {
+            animation: fade-in-small-left .65s;
+        }
+
+        &:nth-of-type(7) {
+            animation: fade-in-small-left .7s;
+        }
+    }
+}
+  
+  [class*="listScroller-"] [class*="listRow-"]:hover [class*="icon-"],
+  [class*="listScroller-"] [class*="listRow-"]:hover [class*="listAvatar-"] {
+      margin-left: 10px;
+      transition: margin-left .2s;
+  }
+  
+[class*="listScroller-"] [class*="listRow-"] {
+    [class*="icon-"], [class*="listAvatar-"] {
+        margin-left: 0;
+        transition: margin-left .2s;
+    }
+
+    &:hover [class*="icon-"],
+    &:hover [class*="listAvatar-"] {
+        margin-left: 10px;
+        transition: margin-left .2s;
+    }
+}
+
+[class*="contextMenu-"] {
+    overflow: hidden !important;
+
+    [class*="item-"] {
+        padding-left: 9px;
+        transition: padding-left .2s;
+        animation: fade-in-small-left .25s;
+
+        &:hover {
+            padding-left: 20px;
+            transition: padding-left .2s;
+        }
+    }
+}
+
+[class*="headerBar-"] {
+    [class*="topic-"], [class*="toolbar-"] {
+        animation: fade-in-small-left .4s;
+    }
+
+    [class*="title-"] {
+        animation: fade-in-small-bottom .4s;
+    }
+}
+  
+div[class*="wrapper-1R"] div[class*="systemPad-"] div[class*="container-"] {
+    animation: tilt-out 1s;
+
+    &[class*="selected-"] {
+        animation: tilt-in 1s forwards;
+    }
+}

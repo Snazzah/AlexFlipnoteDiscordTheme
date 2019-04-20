@@ -1,0 +1,102 @@
+[class*="message-"]{
+    [class*="avatar-"] {
+        animation: fade-in-right .2s;
+    }
+
+    [class*="headerCozyMeta-"] {
+        animation: fade-in-left .2s;
+    }
+}
+
+[class*="container-3-"] {
+    animation: fade-in-left .2s;
+}
+
+[class*="activityProfile-"] {
+    [class*="headerText-"] {
+        animation: fade-in-small-left .5s;
+    }
+
+    [class*="body-"] {
+        animation: fade-in-small-right .5s;
+    }
+}
+
+[class*="userPopout-"] {
+    [class*="body-"] [class*="bodyTitle-"],
+    [class*="rolesList-"] [class*="addButton-"] {
+        animation: fade-in-small-left .5s;
+    }
+
+    [class*="protip-"],
+    [class*="timeBarUserPopout-"] {
+        animation: fade-in-small-top .5s;
+    }
+    
+    [class*="role-"], [class*="note-"] {
+        animation: fade-in-small-right .5s;
+    }
+
+    [class*="activityUserPopout-"] {
+        [class*="headerText-"] {
+            animation: fade-in-small-left .5s;
+        }
+    
+        [class*="body-"] {
+            animation: fade-in-small-right .5s;
+        }
+    }
+}
+
+[class*="userInfoSection-"] {
+    [class*="userInfoSectionHeader-"] {
+        animation: fade-in-small-left .5s;
+    }
+
+    [class*="note-"] {
+        animation: fade-in-small-right .5s;
+    }
+}
+
+[class*="listScroller-"] {
+    animation: fade-in-small-left .45s;
+}
+
+[class*="membersWrap-"] {
+    animation: fade-in-small-left .4s;
+}
+
+[class*="codeRedemption-"] {
+    animation: fade-in-small-bottom .4s;
+
+    & + [class*="root-"] {
+        animation: fade-in-small-top .4s;
+    }
+}
+
+[class*="heroCarousel-"] {
+    animation: fade-in-small-bottom .4s;
+
+    & + [class*="homeBody-"] {
+        animation: fade-in-small-top .4s;
+    }
+}
+
+[class*="friendsTable-"] {
+    [class*="friendsTableAdd-"] {
+        animation: fade-in-small-bottom .4s;
+    }
+
+    [class*="friendTableSuggestionsHeader-"],
+    [class*="friendsTableBody-"] {
+        animation: fade-in-small-top .4s;
+    }
+}
+
+[class*="stickyHeader-"] {
+    animation: fade-in-small-bottom .4s;
+}
+
+[class*="scrollerStore-"] [class*="rowWrapper-"] {
+    animation: fade-in-small-top .4s;
+}
